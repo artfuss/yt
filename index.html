@@ -1,1 +1,16 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+       <script src="https://cdn.jsdelivr.net/npm/@thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.min.js"></script>
+    </head>
+  <body>
+    <video id="player" controls></video>
+    <script>
+        var videoId = window.location.search.split('?v=')[1];
+        console.log(videoId);
+        document.getElementById('player').setAttribute('data-yt2html5', 'https://www.youtube.com/watch?v=' + videoId);
+        new YouTubeToHtml5();
+    </script>
+  </body>
+</html>
